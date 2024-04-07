@@ -1,5 +1,8 @@
 package CoreKnowledge.StopThread;
 
+/**
+ * 最佳实践1： catch 了 InterruptedException 之后的优先选择：在方法签名中抛出异常 那么在 run() 就会强制 try/catch
+ */
 public class ReSendInterrupt implements Runnable {
 	// 因为 run() 方法是重写 Runnable 接口的方法，不能抛出比父类更大的异常。
 	// 所以所有 InterruptedException 异常必需在 run() 方法中处理掉。

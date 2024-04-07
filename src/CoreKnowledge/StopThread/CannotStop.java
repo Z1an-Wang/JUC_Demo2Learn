@@ -1,5 +1,8 @@
 package CoreKnowledge.StopThread;
 
+/**
+ * 描述：如果 while 里面放 try/catch，会导致中断失效
+ */
 public class CannotStop {
 	public static void main(String[] args) throws InterruptedException {
 		Runnable runnable = () -> {
