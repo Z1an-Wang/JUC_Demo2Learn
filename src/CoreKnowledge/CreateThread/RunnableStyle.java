@@ -1,4 +1,4 @@
-package CoreKnowledge;
+package CoreKnowledge.CreateThread;
 
 /**
  * 描述：用 Runnable 的方式创建线程。
