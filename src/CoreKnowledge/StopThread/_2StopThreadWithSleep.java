@@ -1,6 +1,6 @@
 package CoreKnowledge.StopThread;
 
-public class StopThreadWithSleep {
+public class _2StopThreadWithSleep {
 	public static void main(String[] args) throws InterruptedException {
 		Runnable r = () -> {
 			int num = 0;
@@ -11,6 +11,7 @@ public class StopThreadWithSleep {
 					}
 					num++;
 				}
+				// 在通过 sleep() 进入休眠中（WAITING状态）的线程，依然可以响应中断：通过抛出 InterruptedException 异常的方式：
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();

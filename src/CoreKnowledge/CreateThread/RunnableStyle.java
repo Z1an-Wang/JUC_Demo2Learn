@@ -6,6 +6,7 @@ package CoreKnowledge.CreateThread;
 public class RunnableStyle implements Runnable{
 
 	public static void main(String[] args) {
+		// 将 Runnable 对象通过 Thread 的构造函数赋值给 target 对象。
 		Thread thread = new Thread(new RunnableStyle());
 		// 启动一个线程。
 		thread.start();

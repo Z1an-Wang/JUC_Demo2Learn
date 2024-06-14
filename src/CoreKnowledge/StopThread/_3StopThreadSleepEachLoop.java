@@ -1,6 +1,6 @@
 package CoreKnowledge.StopThread;
 
-public class StopThreadSleepEachLoop {
+public class _3StopThreadSleepEachLoop {
 	public static void main(String[] args) throws InterruptedException {
 		Runnable r = () -> {
 			int num = 0;
@@ -10,6 +10,7 @@ public class StopThreadSleepEachLoop {
 						System.out.println(num + " 是 100 的倍数。");
 					}
 					num++;
+					// 如果每次迭代后子线程都被阻塞，相当于在循环体中放入了 Thread.currentThread().isInterrupted() 判断语句。
 					Thread.sleep(10);
 				}
 			} catch (InterruptedException e) {

@@ -26,7 +26,8 @@ public class NotStopVolatile {
 
 		// 关闭生产者，但实际情况：程序仍在运行。
 		p.canceled=true;
-		System.out.println(p.canceled);
+		System.out.println("volatile flag set : " + p.canceled);
+		System.out.println("Thread state : " + t.getState());
 	}
 }
 

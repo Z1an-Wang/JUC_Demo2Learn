@@ -3,7 +3,7 @@ package CoreKnowledge.StopThread;
 /**
  *    错误的停止方法：用 stop() 来停止线程，会导致线程运行一半突然停止，会造成脏数据。
  */
-public class StopThreadDirectly implements Runnable {
+public class _7StopThreadDirectly implements Runnable {
 
 	@Override
 	public void run() {
@@ -23,7 +23,7 @@ public class StopThreadDirectly implements Runnable {
 	}
 
 	public static void main(String[] args) {
-		Thread thread = new Thread(new StopThreadDirectly());
+		Thread thread = new Thread(new _7StopThreadDirectly());
 		thread.start();
 		try {
 			Thread.sleep(1000);

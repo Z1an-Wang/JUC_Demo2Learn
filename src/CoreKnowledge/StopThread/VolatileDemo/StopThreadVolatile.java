@@ -35,5 +35,3 @@ public class StopThreadVolatile implements Runnable {
 		r.setCanceled(true);
 	}
 }
-
-
