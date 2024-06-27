@@ -20,6 +20,11 @@ public class _4PrivateEscape {
 		return states;
 	}
 
+	// 要解决上述的逸出问题，返回对象的副本
+	public Map<String, String> getStatesImproved() {
+		return new HashMap<>(states);
+	}
+
 	public static void main(String[] args) {
 		_4PrivateEscape pe = new _4PrivateEscape();
 
@@ -29,8 +34,13 @@ public class _4PrivateEscape {
 		System.out.println(states);
 
 		// 配置列表被修改，可能返回 null 。
-		System.out.println(states.get("apple"));
-		states.remove("apple");
-		System.out.println(states.get("apple"));
+//		System.out.println(states.get("apple"));
+//		states.remove("apple");
+//		System.out.println(states.get("apple"));
+
+		// （需注释掉上面报错的代码）测试 【逸出】 的解决方案。
+		System.out.println(pe.getStatesImproved().get("apple"));
+		pe.getStatesImproved().remove("apple");
+		System.out.println(pe.getStatesImproved().get("apple"));
 	}
 }
